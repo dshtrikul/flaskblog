@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h1>Welcome Page</h1>
+    <h2>This is a simple flask blog</h2>
+    <div class="border-top pt-3 text-center">
+      <img src="{{ image_file }}" class="img-fluid pb-3">
+    </div>
+
+    <div class="border-top pt-3">
+      <ul class="list-group">
+        <li class="list-group-item list-group-item-light">Need an Account? <a class="ml-2" href="{{ url_for('register') }}">Sign Up Now</a></li>
+        <li class="list-group-item list-group-item-light">If you have an Account <a class="ml-2" href="{{ url_for('login') }}">Login here</a></li>
+      </ul>
+    </div>
+
+{% endblock content %}
