@@ -12,8 +12,8 @@ from flask_mail import Message
 # db.session.query(User).delete()
 # db.session.query(Post).delete()
 # db.session.commit()
-db.create_all()
-# print('\n *', User.query.all())
+# db.create_all()
+## print('\n *', User.query.all())
 
 
 @app.before_request
@@ -27,7 +27,7 @@ def before_request():
 def welcome():
     if current_user.is_authenticated:
         return redirect(url_for('homepage'))
-    image_file = url_for ('static', filename='profile_pics/' + 'blog_logo.png')
+    image_file = url_for ('static', filename='profile_pics/' + 'logo-flask.png')
     return render_template('welcome.html', image_file=image_file)
 
 

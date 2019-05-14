@@ -12,7 +12,11 @@
             <a class="mr-2" href="{{ url_for('user', username=user.username)}}">{{ user.username }}</a>
           </div>
           <h2 class="article-title">About me</h2>
+          {% if user.aboutme %}
           <p class="article-content">{{ user.aboutme }}</p>
+          {% else %}
+          <p class="article-content">Tell about yourself on your <a href="{{ url_for('account')}}">Account</a> page</p>
+          {% endif %}
         </div>
       </article>
     </div>
