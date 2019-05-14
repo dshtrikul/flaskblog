@@ -17,5 +17,5 @@ class Config():
     app.config['MAIL_PORT'] = 587
     app.config['MAIL_USE_TLS'] = True
     app.config['MAIL_USERNAME'] = 'pythontestemailshtrikuldmitry'
-    app.config['MAIL_PASSWORD'] = 'contango90'
+    app.config['MAIL_PASSWORD'] = 'flaskblog'
     app.config['ADMINS'] = ['dmitriyshtrikul@gmail.com']
