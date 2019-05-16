@@ -1,3 +1,7 @@
 .git
 .gitignore
+.dockerignore
 .db
+.yml
+__pycache__/
+mysql/db_data/

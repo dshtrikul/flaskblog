@@ -1,3 +1,4 @@
 env
 __pycache__
-.db
+site.db
+mysql/db_data
