@@ -6,8 +6,7 @@ RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
 WORKDIR /app
-COPY run.py /app
-COPY ./flask_blog /app/flask_blog
+COPY . /app
 WORKDIR /app
 
 EXPOSE 5000
