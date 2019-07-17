@@ -4,13 +4,12 @@ docker run -id -p 5000:5000 -v c:\8_Flask\main_blog:/app --name blog --link db:m
 docker exec -it blog /bin/bash
 
 docker run --name mysql -d -p 3306:3306 -e MYSQL_DATABASE=blog_db -e MYSQL_ROOT_PASSWORD=5555 mysql:latest
-
 docker run --name blog3 -d -p 5000:5000 --rm --link mysql:dbserver -e DATABASE_URL=mysql+pymysql://root:5555@dbserver/blog_db flaskapp
-
 #export TERM=${TERM:-dumb}
-
-docker-compose up -d --build
 
 docker exec -it main_blog_flask_1 /bin/bash
 docker exec -it main_blog_mysql_1 /bin/bash
 mysql -uroot -proot
+
+
+docker-compose up -d --build
