@@ -33,8 +33,8 @@ services:
     restart: always
     # ports:
     #  - "5000:5000"
-    volumes:
-      - ./:/app   ### if changes needed in real time
+    #volumes:
+    #  - ./:/app   ### if changes needed in real time
     depends_on:
       - mysql
     command: gunicorn -w 1 -b :5000 --access-logfile - --error-logfile - run:app

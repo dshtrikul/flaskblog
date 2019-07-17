@@ -1,7 +1,6 @@
-.git
-.gitignore
-.dockerignore
+*/.git*
+*/.dockerignore
 .db
 .yml
-__pycache__/
+*/__pycache__
 mysql/db_data/
